@@ -1,0 +1,5 @@
+# Wokwi Library List
+# See https://docs.wokwi.com/guides/libraries
+
+LCD_I2C
+Grove 4-Digit Display

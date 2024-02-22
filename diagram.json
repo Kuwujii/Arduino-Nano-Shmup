@@ -1,0 +1,166 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-nano", "id": "nano", "top": 13.73, "left": -32.11, "attrs": {} },
+    {
+      "type": "wokwi-lcd2004",
+      "id": "lcd2",
+      "top": -289.58,
+      "left": 78.1,
+      "rotate": 270,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn5",
+      "top": 25.05,
+      "left": 256.68,
+      "rotate": 270,
+      "attrs": { "color": "black", "key": " " }
+    },
+    {
+      "type": "wokwi-led-bar-graph",
+      "id": "bargraph1",
+      "top": -249.03,
+      "left": 106.03,
+      "rotate": 180,
+      "attrs": { "color": "GYR" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 10.46, "left": 159.71, "attrs": {} },
+    {
+      "type": "wokwi-tm1637-7segment",
+      "id": "sevseg1",
+      "top": -124.3,
+      "left": -24.06,
+      "attrs": { "color": "white" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -243.58,
+      "left": 35.9,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -234.41,
+      "left": 35.51,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": -224.45,
+      "left": 35.95,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r4",
+      "top": -214.89,
+      "left": 35.95,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r5",
+      "top": -205.35,
+      "left": 35.52,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r6",
+      "top": -195.78,
+      "left": 35.95,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r7",
+      "top": -185.8,
+      "left": 35.95,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r8",
+      "top": -176.26,
+      "left": 35.95,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r9",
+      "top": -167.14,
+      "left": 35.51,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r10",
+      "top": -157.59,
+      "left": 35.52,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "nano:GND.2", "lcd2:GND", "black", [ "v-24.03", "h101.41" ] ],
+    [ "nano:GND.2", "pot1:GND", "black", [ "v-11.79", "h58.16", "v72.22" ] ],
+    [ "lcd2:VCC", "nano:5V", "red", [ "v12.41", "h-106.05", "v86.8" ] ],
+    [ "pot1:VCC", "nano:5V", "red", [ "v7.84", "h-115.52" ] ],
+    [ "lcd2:SDA", "nano:A4", "blue", [ "v9.22", "h-153.45", "v89.99" ] ],
+    [ "lcd2:SCL", "nano:A5", "blue", [ "v6.04", "h-153.35", "v93.17" ] ],
+    [ "nano:GND.2", "btn5:1.r", "black", [ "v-15.85", "h185.99" ] ],
+    [ "pot1:SIG", "nano:A0", "orange", [ "v13.75", "h-182.48", "v-16.58" ] ],
+    [ "btn5:2.r", "nano:2", "gold", [ "v-16.93", "h-214.59" ] ],
+    [ "sevseg1:GND", "nano:GND.2", "black", [ "h-0.34", "v36.08", "h-57.78" ] ],
+    [ "sevseg1:VCC", "nano:5V", "red", [ "h5.59", "v137.77", "h-63.71" ] ],
+    [ "sevseg1:DIO", "nano:3", "violet", [ "h2.39", "v63.82", "h-79.71" ] ],
+    [ "sevseg1:CLK", "nano:4", "violet", [ "h9.31", "v107.17", "h-96.23" ] ],
+    [ "nano:GND.2", "r9:1", "black", [ "v14.85", "h-181.2", "v-194.87" ] ],
+    [ "nano:GND.2", "r7:1", "black", [ "v24.29", "h-192.83", "v-222.97" ] ],
+    [ "nano:GND.2", "r6:1", "black", [ "v28.26", "h-198.16", "v-236.92" ] ],
+    [ "nano:GND.2", "r3:1", "black", [ "v40.18", "h-214.15", "v-277.51" ] ],
+    [ "nano:GND.2", "r2:1", "black", [ "v44.15", "h-218.03", "v-291.44" ] ],
+    [ "nano:GND.2", "r1:1", "black", [ "v47.62", "h-222.39", "v-304.08" ] ],
+    [ "r1:2", "bargraph1:C10", "black", [ "v0" ] ],
+    [ "r2:2", "bargraph1:C9", "black", [ "v0" ] ],
+    [ "r3:2", "bargraph1:C8", "black", [ "v0" ] ],
+    [ "r4:2", "bargraph1:C7", "black", [ "v0" ] ],
+    [ "r5:2", "bargraph1:C6", "black", [ "v0" ] ],
+    [ "r6:2", "bargraph1:C5", "black", [ "v0" ] ],
+    [ "r7:2", "bargraph1:C4", "black", [ "v0" ] ],
+    [ "r8:2", "bargraph1:C3", "black", [ "v0" ] ],
+    [ "r9:2", "bargraph1:C2", "black", [ "v0" ] ],
+    [ "r10:2", "bargraph1:C1", "black", [ "v0" ] ],
+    [ "bargraph1:A1", "nano:1", "green", [ "h9.7", "v7.74", "h-175.4", "v110.96", "h148.46" ] ],
+    [ "bargraph1:A2", "nano:5", "green", [ "h14.55", "v21.21", "h-186.07", "v111.45", "h87.08" ] ],
+    [ "bargraph1:A3", "nano:6", "green", [ "h18.43", "v35.18", "h-194.79", "v112.41", "h82.32" ] ],
+    [ "bargraph1:A4", "nano:7", "green", [ "h22.3", "v48.65", "h-204.48", "v114.36", "h78.54" ] ],
+    [ "bargraph1:A5", "nano:8", "green", [ "h27.15", "v62.14", "h-214.17", "v114.84", "h73.78" ] ],
+    [ "bargraph1:A6", "nano:9", "green", [ "h8.25", "v-47.46", "h-200.6", "v238.88", "h69.51" ] ],
+    [
+      "bargraph1:A7",
+      "nano:10",
+      "green",
+      [ "h11.64", "v-43.68", "h-208.84", "v250.03", "h64.76" ]
+    ],
+    [ "bargraph1:A8", "nano:11", "green", [ "h16.49", "v-38.92", "h-218.53", "v259.55", "h60" ] ],
+    [
+      "bargraph1:A9",
+      "nano:12",
+      "green",
+      [ "h21.33", "v-33.68", "h-229.67", "v268.92", "h56.7" ]
+    ],
+    [ "bargraph1:A10", "nano:13", "green", [ "v-27.96", "h-214.64", "v342.33" ] ],
+    [ "nano:GND.2", "r8:1", "black", [ "v19.09", "h-187.5", "v-208.23" ] ],
+    [ "nano:GND.2", "r5:1", "black", [ "v32.17", "h-204.94", "v-250.4" ] ],
+    [ "nano:GND.2", "r4:1", "black", [ "v35.56", "h-209.31", "v-263.33" ] ],
+    [ "nano:GND.2", "r10:1", "black", [ "v10.36", "h-176.36", "v-180.83" ] ]
+  ],
+  "dependencies": {}
+}
